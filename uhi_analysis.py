@@ -161,8 +161,8 @@ regression_summary = {
     'coef_NDVI': model.params['NDVI'],
     'coef_NDBI': model.params['NDBI'],
     'coef_NDVIxNDBI': model.params['NDVI_x_NDBI'],
-    'p_NDVI': model.pvalues['NDVI'],
-    'p_NDBI': model.pvalues['NDBI'],
-    'p_NDVIxNDBI': model.pvalues['NDVI_x_NDBI']
+    'p_NDVI': f"{model.pvalues['NDVI']:.2e}",
+    'p_NDBI': f"{model.pvalues['NDBI']:.2e}",
+    'p_NDVIxNDBI': f"{model.pvalues['NDVI_x_NDBI']:.2e}"
 }
 pd.DataFrame([regression_summary]).to_csv("regression_summary.csv", index=False)
