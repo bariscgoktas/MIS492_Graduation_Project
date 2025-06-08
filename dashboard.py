@@ -371,9 +371,9 @@ if show_regression_summary:
         p_interact = reg_df['p_NDVIxNDBI'].values[0]
 
         st.markdown(f"**Model R²:** {r2:.3f}")
-        st.markdown(f"- **NDVI coefficient**: {coef_ndvi:.3f} (p = {p_ndvi:.4f})")
-        st.markdown(f"- **NDBI coefficient**: {coef_ndbi:.3f} (p = {p_ndbi:.4f})")
-        st.markdown(f"- **NDVI × NDBI interaction**: {coef_interact:.3f} (p = {p_interact:.4f})")
+        st.markdown(f"- **NDVI coefficient**: {coef_ndvi:.3f} (p = {p_ndvi})")
+        st.markdown(f"- **NDBI coefficient**: {coef_ndbi:.3f} (p = {p_ndbi})")
+        st.markdown(f"- **NDVI × NDBI interaction**: {coef_interact:.3f} (p = {p_interact})")
 
     except FileNotFoundError:
         st.warning("Regression summary not found. Please make sure 'regression_summary.csv' is generated.")
