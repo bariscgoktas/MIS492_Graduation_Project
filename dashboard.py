@@ -38,8 +38,6 @@ geo_df = geo_df.merge(avg_lst, on='label', how='left')
 
 # Sidebar Filtering
 st.sidebar.header("Grid Filtering")
-uhi_classes = ['Low', 'Medium', 'High']
-selected_class = st.sidebar.multiselect("Filter by UHI Class", options=uhi_classes, default=uhi_classes)
 
 filtered_df = df[df['UHI_Class'].isin(selected_class)]
 year_options = sorted(df['year'].unique())
