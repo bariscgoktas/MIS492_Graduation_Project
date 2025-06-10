@@ -151,7 +151,7 @@ X = reg_df[['NDVI', 'NDBI', 'NDVI_x_NDBI']]
 X = sm.add_constant(X)
 y = reg_df['LST']
 
-model = sm.OLS(y, X).fit()
+model = sm.OLS(y, X).fit(cov_type='HC3')
 
 print("\n=== LST ~ NDVI + NDBI + NDVI×NDBI Regression Results ===")
 print(model.summary())
